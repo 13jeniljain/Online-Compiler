@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Result </h1>
+                {% if verdict == "Accepted" %}
+                <p>Congrats..Your solution is right</p>
+                
+                {% elif verdict == "Compilation Error" %}
+                <p>Compilation Error </p>
+                
+                {% elif verdict == "Runtime Error" %}
+                <p>Runtime error </p>
+                
+                {% elif verdict == "Time Limit Exceeded" %}
+                <p>Time limit exceeded </p>
+                
+                {% else %}
+                <p>Wrong Answer</p>
+                
+                {% endif %}
+
+{% endblock content %}

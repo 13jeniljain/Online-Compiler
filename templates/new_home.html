@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Hello World </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Problem Title   </th>
+            <th>Sr No    </th>
+            <th>Difficulty     </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prob in probs %}
+            <tr>
+                <td><a href="{% url 'prob_detail' prob.pk %}">{{prob.prob_title}}</a></td>
+                <td>{{ prob.prob_id }}</td>
+                <td>{{ prob.prob_diff }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
